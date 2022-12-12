@@ -23,7 +23,7 @@ public class Pizza {
         else {
             price=400;
         }
-        bill="Base Price Of The Pizza: "+price;
+        bill="Base Price Of The Pizza: "+price+"\n";
     }
     public Pizza(boolean isVeg,boolean deluxe){
         this.isVeg = isVeg;
@@ -35,7 +35,7 @@ public class Pizza {
         else {
             price=400;
         }
-        bill="Base Price Of The Pizza: "+price;
+        bill="Base Price Of The Pizza: "+price+"\n";
         addExtraCheese();
         addExtraToppings();
     }
@@ -85,15 +85,15 @@ public class Pizza {
         if(!billing) {
             billing = true;
             if (addCheese) {
-                bill = bill + "\nExtra Cheese Added: " + extraCheese;
+                bill = bill + "Extra Cheese Added: " + extraCheese+"\n";
             }
             if (addToppings) {
-                bill = bill + "\nExtra Toppings Added: " + extraToppings;
+                bill = bill + "Extra Toppings Added: " + extraToppings+"\n";
             }
             if (takeAway) {
-                bill = bill + "\nPaperbag Added: " + paperbag;
+                bill = bill + "Paperbag Added: " + paperbag+"\n";
             }
-            bill = bill + "\nTotal Price: " + price;
+            bill = bill + "Total Price: " + price+"\n";
         }
         return this.bill;
     }
