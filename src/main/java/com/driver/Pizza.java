@@ -30,12 +30,14 @@ public class Pizza {
         // your code goes here
         if(isVeg)
         {
-            price=450;
+            price=300;
         }
         else {
-            price=600;
+            price=400;
         }
         bill="Base Price Of The Pizza: "+price;
+        addExtraCheese();
+        addExtraToppings();
     }
 
 
