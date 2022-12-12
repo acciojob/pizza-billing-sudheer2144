@@ -46,17 +46,17 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         addCheese=true;
-        extraCheese+=80;
+        extraCheese=80;
     }
 
     public void addExtraToppings(){
         // your code goes here
         addToppings=true;
         if(isVeg) {
-            extraToppings+=70;
+            extraToppings=70;
         }
         else {
-            extraToppings+=120;
+            extraToppings=120;
         }
     }
 
