@@ -39,31 +39,43 @@ public class Pizza {
     }
 
 
-
     public int getPrice(){
         return this.price;
     }
 
     public void addExtraCheese(){
         // your code goes here
-        addCheese=true;
-        extraCheese=80;
+        if(!addCheese)
+        {
+            addCheese=true;
+            extraCheese=80;
+            price+=extraCheese;
+        }
+
     }
 
     public void addExtraToppings(){
         // your code goes here
-        addToppings=true;
-        if(isVeg) {
-            extraToppings=70;
-        }
-        else {
-            extraToppings=120;
+        if(!addToppings)
+        {
+            addToppings=true;
+            if(isVeg) {
+                extraToppings=70;
+            }
+            else {
+                extraToppings=120;
+            }
+            price+=extraToppings;
         }
     }
 
     public void addTakeaway(){
         // your code goes here
-        takeAway=true;
+        if(!takeAway)
+        {
+            takeAway=true;
+            price+=paperbag;
+        }
     }
 
     public String getBill(){
@@ -72,15 +84,12 @@ public class Pizza {
             billing = true;
             if (addCheese) {
                 bill = bill + "\nExtra Cheese Added: " + extraCheese;
-                price += extraCheese;
             }
             if (addToppings) {
                 bill = bill + "\nExtra Toppings Added: " + extraToppings;
-                price += extraToppings;
             }
             if (takeAway) {
                 bill = bill + "\nPaperbag Added: " + paperbag;
-                price += paperbag;
             }
             bill = bill + "\nTotal Price: " + price;
         }
